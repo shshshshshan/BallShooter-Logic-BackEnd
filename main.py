@@ -106,7 +106,7 @@ t_ruleB9 = Rule({( proximity.n, height.high): trajectory.high  })
 
 t_ruleC1 = Rule({( proximity.sn, height.vu): trajectory.none })
 t_ruleC2 = Rule({( proximity.sn, height.su): trajectory.none })
-t_ruleC3 = Rule({( proximity.sn, height.u): trajectory.high })
+t_ruleC3 = Rule({( proximity.sn, height.u): trajectory.none })
 t_ruleC4 = Rule({( proximity.sn, height.exact): trajectory.low_mid})
 t_ruleC5 = Rule({( proximity.sn, height.low): trajectory.mid })
 t_ruleC6 = Rule({( proximity.sn, height.low_mid): trajectory.high_mid })
@@ -131,8 +131,8 @@ t_ruleE4 = Rule({( proximity.f, height.exact): trajectory.low })
 t_ruleE5 = Rule({( proximity.f, height.low): trajectory.high_mid })
 t_ruleE6 = Rule({( proximity.f, height.low_mid): trajectory.high_mid })
 t_ruleE7 = Rule({( proximity.f, height.mid): trajectory.mid })
-t_ruleE8 = Rule({( proximity.f, height.high_mid): trajectory.high_mid })
-t_ruleE9 = Rule({( proximity.f, height.high): trajectory.high })
+t_ruleE8 = Rule({( proximity.f, height.high_mid): trajectory.mid })
+t_ruleE9 = Rule({( proximity.f, height.high): trajectory.high_mid })
 
 t_ruleF1 = Rule({( proximity.vf, height.vu): trajectory.none })
 t_ruleF2 = Rule({( proximity.vf, height.su): trajectory.low_mid })
@@ -151,62 +151,14 @@ t_ruleD1 | t_ruleD2 | t_ruleD3 | t_ruleD4 | t_ruleD5 | t_ruleD6 | t_ruleD7 | t_r
 t_ruleE1 | t_ruleE2 | t_ruleE3 | t_ruleE4 | t_ruleE5 | t_ruleE6 | t_ruleE7 | t_ruleE8 | t_ruleE9 | \
 t_ruleF1 | t_ruleF2 | t_ruleF3 | t_ruleF4 | t_ruleF5 | t_ruleF6 | t_ruleF7 | t_ruleF8 | t_ruleF9
 
-T_RULES = []
-
-T_RULES.append( t_ruleA1 ) 
-T_RULES.append( t_ruleA2 )
-T_RULES.append( t_ruleA3 )
-T_RULES.append( t_ruleA4 )
-T_RULES.append( t_ruleA5 )
-T_RULES.append( t_ruleA6 )
-T_RULES.append( t_ruleA7 )
-T_RULES.append( t_ruleA8 )
-T_RULES.append( t_ruleA9 )
-T_RULES.append( t_ruleB1 ) 
-T_RULES.append( t_ruleB2 )
-T_RULES.append( t_ruleB3 )
-T_RULES.append( t_ruleB4 )
-T_RULES.append( t_ruleB5 )
-T_RULES.append( t_ruleB6 )
-T_RULES.append( t_ruleB7 )
-T_RULES.append( t_ruleB8 )
-T_RULES.append( t_ruleB9 )
-T_RULES.append( t_ruleC1 ) 
-T_RULES.append( t_ruleC2 )
-T_RULES.append( t_ruleC3 )
-T_RULES.append( t_ruleC4 )
-T_RULES.append( t_ruleC5 )
-T_RULES.append( t_ruleC6 )
-T_RULES.append( t_ruleC7 )
-T_RULES.append( t_ruleC8 )
-T_RULES.append( t_ruleC9 )
-T_RULES.append( t_ruleD1 ) 
-T_RULES.append( t_ruleD2 )
-T_RULES.append( t_ruleD3 )
-T_RULES.append( t_ruleD4 )
-T_RULES.append( t_ruleD5 )
-T_RULES.append( t_ruleD6 )
-T_RULES.append( t_ruleD7 )
-T_RULES.append( t_ruleD8 )
-T_RULES.append( t_ruleD9 )
-T_RULES.append( t_ruleE1 ) 
-T_RULES.append( t_ruleE2 )
-T_RULES.append( t_ruleE3 )
-T_RULES.append( t_ruleE4 )
-T_RULES.append( t_ruleE5 )
-T_RULES.append( t_ruleE6 )
-T_RULES.append( t_ruleE7 )
-T_RULES.append( t_ruleE8 )
-T_RULES.append( t_ruleE9 )
-T_RULES.append( t_ruleF1 ) 
-T_RULES.append( t_ruleF2 )
-T_RULES.append( t_ruleF3 )
-T_RULES.append( t_ruleF4 )
-T_RULES.append( t_ruleF5 )
-T_RULES.append( t_ruleF6 )
-T_RULES.append( t_ruleF7 )
-T_RULES.append( t_ruleF8 )
-T_RULES.append( t_ruleF9 )
+T_RULES = [
+    t_ruleA1, t_ruleA2, t_ruleA3, t_ruleA4, t_ruleA5, t_ruleA6, t_ruleA7, t_ruleA8, t_ruleA9,
+    t_ruleB1, t_ruleB2, t_ruleB3, t_ruleB4, t_ruleB5, t_ruleB6, t_ruleB7, t_ruleB8, t_ruleB9,
+    t_ruleC1, t_ruleC2, t_ruleC3, t_ruleC4, t_ruleC5, t_ruleC6, t_ruleC7, t_ruleC8, t_ruleC9,
+    t_ruleD1, t_ruleD2, t_ruleD3, t_ruleD4, t_ruleD5, t_ruleD6, t_ruleD7, t_ruleD8, t_ruleD9,
+    t_ruleE1, t_ruleE2, t_ruleE3, t_ruleE4, t_ruleE5, t_ruleE6, t_ruleE7, t_ruleE8, t_ruleE9,
+    t_ruleF1, t_ruleF2, t_ruleF3, t_ruleF4, t_ruleF5, t_ruleF6, t_ruleF7, t_ruleF8, t_ruleF9
+]
 
 # Magnitude rules
 m_ruleA1 = Rule({( proximity.vn, height.vu): magnitude.none })
@@ -231,7 +183,7 @@ m_ruleB9 = Rule({( proximity.n, height.high): magnitude.strong })
 
 m_ruleC1 = Rule({( proximity.sn, height.vu): magnitude.weak })
 m_ruleC2 = Rule({( proximity.sn, height.su): magnitude.weak })
-m_ruleC3 = Rule({( proximity.sn, height.u): magnitude.ample })
+m_ruleC3 = Rule({( proximity.sn, height.u): magnitude.strong })
 m_ruleC4 = Rule({( proximity.sn, height.exact): magnitude.ample })
 m_ruleC5 = Rule({( proximity.sn, height.low): magnitude.ample })
 m_ruleC6 = Rule({( proximity.sn, height.low_mid): magnitude.strong })
@@ -256,8 +208,8 @@ m_ruleE4 = Rule({( proximity.f, height.exact): magnitude.strong })
 m_ruleE5 = Rule({( proximity.f, height.low): magnitude.strong })
 m_ruleE6 = Rule({( proximity.f, height.low_mid): magnitude.strong })
 m_ruleE7 = Rule({( proximity.f, height.mid): magnitude.strong })
-m_ruleE8 = Rule({( proximity.f, height.high_mid): magnitude.powerful })
-m_ruleE9 = Rule({( proximity.f, height.high): magnitude.powerful })
+m_ruleE8 = Rule({( proximity.f, height.high_mid): magnitude.strong })
+m_ruleE9 = Rule({( proximity.f, height.high): magnitude.strong })
 
 m_ruleF1 = Rule({( proximity.vf, height.vu): magnitude.strong })
 m_ruleF2 = Rule({( proximity.vf, height.su): magnitude.strong })
@@ -276,62 +228,14 @@ m_ruleD1 | m_ruleD2 | m_ruleD3 | m_ruleD4 | m_ruleD5 | m_ruleD6 | m_ruleD7 | m_r
 m_ruleE1 | m_ruleE2 | m_ruleE3 | m_ruleE4 | m_ruleE5 | m_ruleE6 | m_ruleE7 | m_ruleE8 | m_ruleE9 | \
 m_ruleF1 | m_ruleF2 | m_ruleF3 | m_ruleF4 | m_ruleF5 | m_ruleF6 | m_ruleF7 | m_ruleF8 | m_ruleF9
 
-M_RULES = []
-
-M_RULES.append( m_ruleA1 ) 
-M_RULES.append( m_ruleA2 )
-M_RULES.append( m_ruleA3 )
-M_RULES.append( m_ruleA4 )
-M_RULES.append( m_ruleA5 )
-M_RULES.append( m_ruleA6 )
-M_RULES.append( m_ruleA7 )
-M_RULES.append( m_ruleA8 )
-M_RULES.append( m_ruleA9 )
-M_RULES.append( m_ruleB1 ) 
-M_RULES.append( m_ruleB2 )
-M_RULES.append( m_ruleB3 )
-M_RULES.append( m_ruleB4 )
-M_RULES.append( m_ruleB5 )
-M_RULES.append( m_ruleB6 )
-M_RULES.append( m_ruleB7 )
-M_RULES.append( m_ruleB8 )
-M_RULES.append( m_ruleB9 )
-M_RULES.append( m_ruleC1 ) 
-M_RULES.append( m_ruleC2 )
-M_RULES.append( m_ruleC3 )
-M_RULES.append( m_ruleC4 )
-M_RULES.append( m_ruleC5 )
-M_RULES.append( m_ruleC6 )
-M_RULES.append( m_ruleC7 )
-M_RULES.append( m_ruleC8 )
-M_RULES.append( m_ruleC9 )
-M_RULES.append( m_ruleD1 ) 
-M_RULES.append( m_ruleD2 )
-M_RULES.append( m_ruleD3 )
-M_RULES.append( m_ruleD4 )
-M_RULES.append( m_ruleD5 )
-M_RULES.append( m_ruleD6 )
-M_RULES.append( m_ruleD7 )
-M_RULES.append( m_ruleD8 )
-M_RULES.append( m_ruleD9 )
-M_RULES.append( m_ruleE1 ) 
-M_RULES.append( m_ruleE2 )
-M_RULES.append( m_ruleE3 )
-M_RULES.append( m_ruleE4 )
-M_RULES.append( m_ruleE5 )
-M_RULES.append( m_ruleE6 )
-M_RULES.append( m_ruleE7 )
-M_RULES.append( m_ruleE8 )
-M_RULES.append( m_ruleE9 )
-M_RULES.append( m_ruleF1 ) 
-M_RULES.append( m_ruleF2 )
-M_RULES.append( m_ruleF3 )
-M_RULES.append( m_ruleF4 )
-M_RULES.append( m_ruleF5 )
-M_RULES.append( m_ruleF6 )
-M_RULES.append( m_ruleF7 )
-M_RULES.append( m_ruleF8 )
-M_RULES.append( m_ruleF9 )
+M_RULES = [
+    m_ruleA1, m_ruleA2, m_ruleA3, m_ruleA4, m_ruleA5, m_ruleA6, m_ruleA7, m_ruleA8, m_ruleA9,
+    m_ruleB1, m_ruleB2, m_ruleB3, m_ruleB4, m_ruleB5, m_ruleB6, m_ruleB7, m_ruleB8, m_ruleB9,
+    m_ruleC1, m_ruleC2, m_ruleC3, m_ruleC4, m_ruleC5, m_ruleC6, m_ruleC7, m_ruleC8, m_ruleC9,
+    m_ruleD1, m_ruleD2, m_ruleD3, m_ruleD4, m_ruleD5, m_ruleD6, m_ruleD7, m_ruleD8, m_ruleD9,
+    m_ruleE1, m_ruleE2, m_ruleE3, m_ruleE4, m_ruleE5, m_ruleE6, m_ruleE7, m_ruleE8, m_ruleE9,
+    m_ruleF1, m_ruleF2, m_ruleF3, m_ruleF4, m_ruleF5, m_ruleF6, m_ruleF7, m_ruleF8, m_ruleF9
+]
 
 def getCOG(x, y):
     coords = {proximity: x, height: y}
@@ -339,25 +243,33 @@ def getCOG(x, y):
     t_cog = TRAJECTORY_RULES(coords)
     m_cog = MAGNITUDE_RULES(coords)
 
-    # for i in range(len(T_RULES)):
-    #     print(f'Rule {chr(ord("a") + int(i / 9))}{i % 9 + 1}: {T_RULES[i](coords)}')
+    for i in range(len(T_RULES)):
+        score = T_RULES[i](coords)
 
-    # print('***')
+        if score: 
+            print(f'Trajectory Rule {chr(ord("A") + int(i / 9))}{i % 9 + 1}: {score}')
 
-    # for i in range(len(M_RULES)):
-    #     print(f'Rule {chr(ord("a") + int(i / 9))}{i % 9 + 1}: {M_RULES[i](coords)}')
+    print('***')
 
-    # for s, v in proximity(x).items():
-    #     if v == 0: continue
+    for i in range(len(M_RULES)):
+        score = M_RULES[i](coords)
 
-    #     print(str(s) + ' ' + str(v))
+        if score:
+            print(f'Magnitude Rule {chr(ord("A") + int(i / 9))}{i % 9 + 1}: {score}')
 
-    # print('***')
+    print('***')
 
-    # for s, v in height(y).items():
-    #     if v == 0: continue
+    for s, v in proximity(x).items():
+        if v == 0: continue
+
+        print(str(s) + ' ' + str(v))
+
+    print('***')
+
+    for s, v in height(y).items():
+        if v == 0: continue
         
-    #     print(str(s) + ' ' + str(v))
+        print(str(s) + ' ' + str(v))
 
     # print('***')
 
