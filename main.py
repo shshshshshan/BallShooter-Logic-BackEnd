@@ -48,11 +48,6 @@ height.high = R(380, 480)
 
 # Output Domain
 # Trajectory Domain
-ONE = 23 * (pi / 180)
-TWO = 45 * (pi / 180)
-THREE = 68 * (pi / 180)
-FOUR = 90 * (pi / 180)
-
 trajectory = Domain('Trajectory', 0, 5)
 trajectory.none = S(0, 1)
 trajectory.low = triangular(0, 2, c=1)
@@ -142,7 +137,7 @@ t_ruleF5 = Rule({( proximity.vf, height.low): trajectory.low_mid })
 t_ruleF6 = Rule({( proximity.vf, height.low_mid): trajectory.high_mid })
 t_ruleF7 = Rule({( proximity.vf, height.mid): trajectory.high })
 t_ruleF8 = Rule({( proximity.vf, height.high_mid): trajectory.high_mid })
-t_ruleF9 = Rule({( proximity.vf, height.high): trajectory.high_mid  })
+t_ruleF9 = Rule({( proximity.vf, height.high): trajectory.high_mid })
 
 TRAJECTORY_RULES = t_ruleA1 | t_ruleA2 | t_ruleA3 | t_ruleA4 | t_ruleA5 | t_ruleA6 | t_ruleA7 | t_ruleA8 | t_ruleA9 | \
 t_ruleB1 | t_ruleB2 | t_ruleB3 | t_ruleB4 | t_ruleB5 | t_ruleB6 | t_ruleB7 | t_ruleB8 | t_ruleB9 | \
